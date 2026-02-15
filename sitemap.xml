@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://appmakervishal.github.io/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://appmakervishal.github.io/join-ISDA/</loc>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://appmakervishal.github.io/-/</loc>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://appmakervishal.github.io/showcase</loc>
+    <priority>0.90</priority>
+  </url>
+
+  <url><loc>https://appmakervishal.github.io/me/</loc><priority>0.85</priority></url>
+  <url><loc>https://appmakervishal.github.io/appmakervishal/</loc><priority>0.80</priority></url>
+  <url><loc>https://appmakervishal.github.io/appmakervishal.github.io/</loc><priority>0.80</priority></url>
+
+  <url><loc>https://appmakervishal.github.io/agni-script/</loc><priority>0.85</priority></url>
+  <url><loc>https://appmakervishal.github.io/HTML/</loc><priority>0.75</priority></url>
+  <url><loc>https://appmakervishal.github.io/PHP/</loc><priority>0.75</priority></url>
+  <url><loc>https://appmakervishal.github.io/Lua/</loc><priority>0.75</priority></url>
+
+  <url><loc>https://appmakervishal.github.io/File-to-URL-Generator/</loc><priority>0.80</priority></url>
+  <url><loc>https://appmakervishal.github.io/GitHub-Repo-Info-Finder/</loc><priority>0.80</priority></url>
+  <url><loc>https://appmakervishal.github.io/GitHub-Repo-info-Viewer/</loc><priority>0.80</priority></url>
+  <url><loc>https://appmakervishal.github.io/Google-Search-URL-Generator/</loc><priority>0.80</priority></url>
+  <url><loc>https://appmakervishal.github.io/IP-finder/</loc><priority>0.75</priority></url>
+  <url><loc>https://appmakervishal.github.io/keyword-finder/</loc><priority>0.75</priority></url>
+  <url><loc>https://appmakervishal.github.io/QR-maker/</loc><priority>0.75</priority></url>
+  <url><loc>https://appmakervishal.github.io/QR-scanner/</loc><priority>0.75</priority></url>
+  <url><loc>https://appmakervishal.github.io/LAN-Chat-File-Transfer/</loc><priority>0.75</priority></url>
+
+  <url><loc>https://appmakervishal.github.io/auth/</loc><priority>0.70</priority></url>
+  <url><loc>https://appmakervishal.github.io/authenticator/</loc><priority>0.70</priority></url>
+
+  <url><loc>https://appmakervishal.github.io/edu/</loc><priority>0.70</priority></url>
+  <url><loc>https://appmakervishal.github.io/Law/</loc><priority>0.65</priority></url>
+  <url><loc>https://appmakervishal.github.io/PPT/</loc><priority>0.65</priority></url>
+  <url><loc>https://appmakervishal.github.io/meet/</loc><priority>0.60</priority></url>
+  <url><loc>https://appmakervishal.github.io/minicraft/</loc><priority>0.60</priority></url>
+  <url><loc>https://appmakervishal.github.io/browse/</loc><priority>0.50</priority></url>
+</urlset>
