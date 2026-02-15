@@ -126,6 +126,6 @@ AI/Metadata: [llms.txt](https://vishal1454.github.io/.well-known/llms.txt)
 
 ---
 
-## 🏆 Profile Badges ![Repos (vishal1454)](https://img.shields.io/badge/dynamic/json?color=blue&label=Repos&query=$.public_repos&url=https://api.github.com/users/vishal1454) ![Repos (appmakervishal)](https://img.shields.io/badge/dynamic/json?color=blue&label=Repos&query=$.public_repos&url=https://api.github.com/users/appmakervishal) ![Followers](https://img.shields.io/github/followers/vishal1454?style=social) ![Stars](https://img.shields.io/github/stars/vishal1454?style=social)
+## 🏆 Profile Badges ![Repos (vishal1454)](https://img.shields.io/badge/dynamic/json?color=blue&label=Repos&query=$.public_repos&url=https://api.github.com/users/vishal1454) ![Repos (appmakervishal)](https://img.shields.io/badge/dynamic/json?color=blue&label=Repos&query=$.public_repos&url=https://api.github.com/users/appmakervishal) ![Followers](https://img.shields.io/github/followers/appmakervishal?style=social) ![Stars](https://img.shields.io/github/stars/appmakervishal?style=social)
 AI/Metadata: [llms.txt](https://vishal1454.github.io/.well-known/llms.txt)
 
