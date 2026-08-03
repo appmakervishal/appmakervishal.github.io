@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal — Executive Leader, Chief Architect & GenAI Vibe Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0EA5E9',
+                            darkBlue: '#0369A1',
+                            purple: '#8B5CF6',
+                            cyber: '#06B6D4',
+                            neonGreen: '#10B981',
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['Fira Code', 'monospace'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* custom glassmorphic scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.05);
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(14, 165, 233, 0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(14, 165, 233, 0.5);
+        }
+
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        /* Glow effects for Vibe Mode */
+        .vibe-glow-blue {
+            box-shadow: 0 0 20px rgba(14, 165, 233, 0.15);
+        }
+        .vibe-glow-purple {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.25);
+        }
+
+        /* Custom animation for matrix canvas background */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(3deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Typing cursor */
+        .cursor-blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        /* Neon Border animation */
+        .neon-border {
+            position: relative;
+            overflow: hidden;
+        }
+        .neon-border::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(139, 92, 246, 0.4),
+                transparent
+            );
+            transition: 0.5s;
+        }
+        .neon-border:hover::before {
+            left: 100%;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-500">
+
+    <!-- Gradient Background Highlights (Decorative) -->
+    <div class="fixed top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-sky-400/10 dark:bg-sky-500/5 blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-purple-500/10 dark:bg-purple-600/5 blur-[150px] pointer-events-none z-0"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo & Brand -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-sky-400 to-indigo-600 flex items-center justify-center text-white font-extrabold text-xl shadow-lg relative overflow-hidden group">
+                        <span class="absolute inset-0 bg-gradient-to-br from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
+                        <span class="relative z-10 font-mono">V</span>
+                    </div>
+                    <div>
+                        <span class="font-bold text-lg tracking-tight bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">Vande Bharat OS Founder</span>
+                        <div class="text-[10px] uppercase tracking-widest text-slate-500 dark:text-slate-400 font-bold -mt-1">Portfolio & Theoretical Framework</div>
+                    </div>
+                </div>
+
+                <!-- Theme / Vibe Toggle & Desktop Controls -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <!-- Quick Mode Info -->
+                    <div class="text-xs text-right font-medium text-slate-500 dark:text-slate-400">
+                        <span id="vibe-mode-label">Executive Blue Mode</span>
+                    </div>
+
+                    <!-- Toggle Button -->
+                    <button id="theme-toggle" class="relative inline-flex items-center h-8 rounded-full w-16 transition-colors duration-300 focus:outline-none bg-sky-500 dark:bg-purple-600" aria-label="Toggle Vibe Theme">
+                        <span class="sr-only">Toggle Vibe</span>
+                        <!-- Ball -->
+                        <span id="theme-toggle-ball" class="inline-block w-6 h-6 transform bg-white rounded-full transition-transform duration-300 translate-x-1 dark:translate-x-9 flex items-center justify-center text-xs shadow">
+                            <i id="theme-icon" class="fas fa-briefcase text-sky-500 dark:text-purple-600"></i>
+                        </span>
+                    </button>
+
+                    <!-- Nav Links Direct Jump -->
+                    <a href="#matrix-visualizer" class="text-sm font-semibold hover:text-sky-500 dark:hover:text-purple-400 transition-colors">
+                        <i class="fa-solid fa-circle-nodes mr-1"></i> Causal Matrix Sandbox
+                    </a>
+                </div>
+
+                <!-- Mobile Navigation / Vibe Toggle trigger -->
+                <div class="flex items-center space-x-3 md:hidden">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:scale-105 transition-transform" aria-label="Toggle Theme Mobile">
+                        <i id="theme-icon-mobile" class="fas fa-briefcase text-sky-500"></i>
+                    </button>
+                    <button id="menu-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" aria-label="Open Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 transition-all">
+            <div class="px-4 py-3 space-y-2">
+                <p class="text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500 px-3 tracking-wider">Navigation Tabs</p>
+                <div class="grid grid-cols-2 gap-2" id="mobile-tab-links">
+                    <!-- Javascript will insert tabs here or we copy them -->
+                </div>
+                <div class="border-t border-slate-200 dark:border-slate-800 my-2 pt-2">
+                    <a href="#matrix-visualizer" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-base font-medium bg-gradient-to-r from-sky-500/10 to-purple-500/10 hover:from-sky-500/20 text-sky-600 dark:text-purple-400">
+                        <i class="fa-solid fa-circle-nodes mr-2"></i> Causal Matrix Sandbox
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container Layout -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10 flex flex-col space-y-8">
+
+        <!-- TOP PROFILE HERO HEADER -->
+        <section class="glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden vibe-glow-blue" id="profile-hero">
+            <!-- Decorative light lines -->
+            <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.07] pointer-events-none bg-[radial-gradient(#0ea5e9_1px,transparent_1px)] [background-size:16px_16px]"></div>
+
+            <div class="relative z-10 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
+                <!-- Left: Profile Info, Badges and Dynamic Vibe Details -->
+                <div class="flex-grow space-y-6 text-center lg:text-left">
+                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start">
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-sky-500/10 text-sky-600 dark:bg-sky-400/10 dark:text-sky-300 border border-sky-500/20">
+                            <i class="fa-solid fa-graduation-cap mr-1"></i> Student & GenAI Vibe Developer
+                        </span>
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-600 dark:bg-purple-400/10 dark:text-purple-300 border border-purple-500/20">
+                            <i class="fa-solid fa-code-branch mr-1"></i> Vande Bharat OS System Founder
+                        </span>
+                        <span class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-300 border border-emerald-500/20">
+                            <i class="fa-solid fa-flask mr-1"></i> Lead Theorist
+                        </span>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
+                            <span id="vibe-title-prefix" class="text-slate-800 dark:text-slate-100">Welcome to the Matrix of</span><br/>
+                            <span id="hero-name" class="bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent text-5xl sm:text-6xl font-black">
+                                VISHAL
+                            </span>
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl font-medium leading-relaxed">
+                            National Vice President & CTO of <strong class="text-sky-500 dark:text-sky-400">ISDA</strong>, Founder of <strong class="text-indigo-500 dark:text-indigo-400">Vande Bharat OS</strong>, ACEO & CTO of <strong class="text-purple-500 dark:text-purple-400">VB Publication</strong>, Lead Author of PET Plastic Chemical Mineralization, and Author of the Absolute Causal Matrix & DIPA paradigm.
+                        </p>
+                    </div>
+
+                    <!-- Global Verification Icons / Badges Grid -->
+                    <div class="pt-4 border-t border-slate-200/50 dark:border-slate-800/50">
+                        <p class="text-[11px] uppercase tracking-widest font-bold text-slate-400 dark:text-slate-500 mb-3 text-center lg:text-left">
+                            Verified Ecosystem Integrations & Certifications
+                        </p>
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start items-center">
+                            <div class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm">
+                                <i class="fa-brands fa-google text-red-500"></i>
+                                <span class="font-semibold text-slate-700 dark:text-slate-300">Google Verified Student</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm">
+                                <i class="fa-brands fa-microsoft text-blue-500"></i>
+                                <span class="font-semibold text-slate-700 dark:text-slate-300">Azure Developer</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm">
+                                <i class="fa-brands fa-meta text-sky-400"></i>
+                                <span class="font-semibold text-slate-700 dark:text-slate-300">Meta Verified</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm">
+                                <i class="fa-brands fa-aws text-orange-500"></i>
+                                <span class="font-semibold text-slate-700 dark:text-slate-300">Amazon Developer</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-slate-100 dark:bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-xs shadow-sm">
+                                <i class="fa-solid fa-shield-halved text-emerald-500"></i>
+                                <span class="font-semibold text-slate-700 dark:text-slate-300">HackerRank & TryHackMe</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Cybernetic Key Stats Widget -->
+                <div class="w-full lg:w-80 glass-card p-6 rounded-2xl border-2 border-sky-500/20 relative overflow-hidden flex flex-col justify-between shrink-0">
+                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-sky-400/20 rounded-full blur-xl"></div>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs uppercase font-extrabold tracking-wider text-slate-400">Operational DNA</span>
+                            <span class="h-2 w-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200/40 dark:border-slate-800/40 text-center">
+                                <div class="text-2xl font-black text-sky-500 dark:text-sky-400">12+</div>
+                                <div class="text-[9px] uppercase tracking-wider font-bold text-slate-500">Leadership Roles</div>
+                            </div>
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200/40 dark:border-slate-800/40 text-center">
+                                <div class="text-2xl font-black text-indigo-500 dark:text-indigo-400">3+</div>
+                                <div class="text-[9px] uppercase tracking-wider font-bold text-slate-500">Theories Authored</div>
+                            </div>
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200/40 dark:border-slate-800/40 text-center">
+                                <div class="text-2xl font-black text-purple-500 dark:text-purple-400">100%</div>
+                                <div class="text-[9px] uppercase tracking-wider font-bold text-slate-500">Student Minded</div>
+                            </div>
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200/40 dark:border-slate-800/40 text-center">
+                                <div class="text-2xl font-black text-emerald-500 dark:text-emerald-400">1</div>
+                                <div class="text-[9px] uppercase tracking-wider font-bold text-slate-500">Custom OS Kernel</div>
+                            </div>
+                        </div>
+
+                        <!-- Current Focus Text -->
+                        <div class="bg-slate-100/50 dark:bg-slate-900/50 p-3 rounded-xl border border-slate-200/40 dark:border-slate-800/40 space-y-1">
+                            <div class="text-[9px] uppercase tracking-wider font-extrabold text-slate-400">Active Core Directive</div>
+                            <div class="text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                                <i class="fa-solid fa-network-wired text-purple-500 animate-pulse"></i>
+                                Orchestrating DIPA & VOS
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DASHBOARD EXPLORER SYSTEM -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+            <!-- LEFT NAVIGATION SIDEBAR / TABS (Desktop) -->
+            <div class="lg:col-span-4 space-y-4">
+                <!-- Sidebar card -->
+                <div class="glass-card rounded-2xl p-4 sticky top-24 shadow-sm space-y-4">
+                    <div class="px-3 py-2 border-b border-slate-200 dark:border-slate-800/80">
+                        <h2 class="text-sm uppercase tracking-widest font-extrabold text-slate-400 dark:text-slate-500 flex items-center justify-between">
+                            <span>Role Navigator</span>
+                            <i class="fa-solid fa-compass text-slate-400"></i>
+                        </h2>
+                    </div>
+
+                    <!-- Navigation menu list -->
+                    <nav class="space-y-1" id="desktop-tab-list">
+                        <!-- Navigation items added dynamically with JavaScript for maintainability -->
+                    </nav>
+
+                    <div class="p-3 bg-gradient-to-br from-sky-500/5 to-purple-500/5 rounded-xl border border-sky-500/10 text-[11px] text-slate-500 dark:text-slate-400 leading-relaxed text-center">
+                        <i class="fa-solid fa-shuffle mr-1 text-purple-400 animate-spin"></i> Toggle the <strong class="text-sky-500 dark:text-purple-400">Vibe Mode</strong> at the top right to switch between an Executive Corporate aesthetic and a Cyberpunk Glow atmosphere.
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT DYNAMIC CONTENT AREA -->
+            <div class="lg:col-span-8 space-y-6" id="dashboard-content-area">
+                <!-- Dynamically swapped panel loaded via JavaScript -->
+                <div id="active-tab-panel" class="space-y-6">
+                    <!-- Default loading fallback / Initialized tab goes here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- CAUSAL MATRIX INTERACTIVE LAB -->
+        <section id="matrix-visualizer" class="glass-card rounded-3xl p-6 sm:p-8 space-y-6 border border-sky-500/10 vibe-glow-blue relative overflow-hidden">
+            <div class="absolute -top-12 -left-12 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl"></div>
+
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-4 border-b border-slate-200 dark:border-slate-800/80">
+                <div>
+                    <span class="px-2.5 py-1 text-[10px] font-extrabold uppercase tracking-widest rounded bg-purple-500/10 text-purple-600 dark:text-purple-400">
+                        Theoretical Sandbox
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-black mt-2 tracking-tight">
+                        Absolute Causal Matrix & DIPA Simulation
+                    </h2>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 mt-1 max-w-xl">
+                        Interact with the visualizer to simulate deterministic imprints (parental and environmental attributions) and watch how psychological causal footprints synthesize geometric boundary nodes.
+                    </p>
+                </div>
+                <!-- Canvas Control buttons -->
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="spawnMatrixNode('imprint')" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-purple-500 hover:bg-purple-600 text-white transition-colors shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-fingerprint"></i> Spawn Imprint
+                    </button>
+                    <button onclick="spawnMatrixNode('outcome')" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-sky-500 hover:bg-sky-600 text-white transition-colors shadow-sm flex items-center gap-1.5">
+                        <i class="fa-solid fa-bezier-curve"></i> Spawn Attribution
+                    </button>
+                    <button onclick="clearMatrixCanvas()" class="px-3.5 py-2 text-xs font-bold rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors flex items-center gap-1.5">
+                        <i class="fa-solid fa-trash-can"></i> Reset Matrix
+                    </button>
+                </div>
+            </div>
+
+            <!-- Canvas Grid Workspace -->
+            <div class="relative rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-900 aspect-[16/9] min-h-[300px]">
+                <!-- Instructions Overlay -->
+                <div class="absolute top-4 left-4 z-20 bg-slate-950/80 backdrop-blur-md px-3 py-2 rounded-xl border border-white/10 text-xs text-white pointer-events-none space-y-1">
+                    <div class="font-bold flex items-center gap-1.5">
+                        <i class="fa-solid fa-circle-info text-sky-400"></i> Workspace Active
+                    </div>
+                    <div class="text-[10px] text-slate-400">
+                        • Click anywhere inside to inject causal matrices.<br/>
+                        • Purple nodes = Parental/Deterministic Imprints.<br/>
+                        • Blue nodes = Attributed/Outcome Parameters.
+                    </div>
+                </div>
+
+                <canvas id="causal-matrix-canvas" class="w-full h-full block cursor-crosshair"></canvas>
+            </div>
+
+            <!-- Theory Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                <div class="bg-white/50 dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800/50 space-y-2">
+                    <h3 class="font-bold text-base flex items-center gap-2 text-purple-600 dark:text-purple-400">
+                        <i class="fa-solid fa-dna"></i>
+                        Paradigm of Determinist Imprinting (DIPA)
+                    </h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        Explores the multi-generational attributions where parental actions, socioeconomic forces, and micro-confluences mold the physical and operational paths of offspring. Every causal vector imprints deterministically.
+                    </p>
+                </div>
+                <div class="bg-white/50 dark:bg-slate-900/40 p-5 rounded-2xl border border-slate-200 dark:border-slate-800/50 space-y-2">
+                    <h3 class="font-bold text-base flex items-center gap-2 text-sky-600 dark:text-sky-400">
+                        <i class="fa-solid fa-code-merge"></i>
+                        Absolute Causal Matrix (ACM)
+                    </h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                        An elegant theoretical model declaring that no action is isolated. Our physical environment, codebases, and digital constructs are intertwined in a perfect, multi-dimensional boundary confluence where past variables trigger determinist equations.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="border-t border-slate-200 dark:border-slate-900 bg-white/50 dark:bg-slate-950/80 mt-16 py-12 relative z-10 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="flex justify-center space-x-6">
+                <!-- Social connections / external profiles representing verified status -->
+                <a href="#" class="text-slate-400 hover:text-sky-500 transition-colors text-xl" title="Google Developer Profile">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-purple-500 transition-colors text-xl" title="Microsoft Azure Dev Profile">
+                    <i class="fa-brands fa-microsoft"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition-colors text-xl" title="Meta Dev Network">
+                    <i class="fa-brands fa-meta"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-orange-500 transition-colors text-xl" title="AWS Builders">
+                    <i class="fa-brands fa-aws"></i>
+                </a>
+                <a href="#" class="text-slate-400 hover:text-red-500 transition-colors text-xl" title="HackerRank Contributor">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </a>
+            </div>
+
+            <div class="space-y-2">
+                <p class="text-xs text-slate-500 dark:text-slate-400">
+                    Developed with utmost dedication for the student community. Designed to scale, inspire, and code the future.
+                </p>
+                <p class="text-[10px] text-slate-400 uppercase tracking-widest font-extrabold">
+                    © 2025 Vande Bharat OS & ISDA. All Theoretical Frameworks Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tab Panels & Dynamic Content Javascript -->
+    <script>
+        // Content definitions for the 7 sections of leadership and academic excellence
+        const tabData = {
+            overview: {
+                title: "Executive Synthesis",
+                icon: "fa-solid fa-house-chimney",
+                subtitle: "An Architectural Map of Leadership & Theory",
+                badge: "Active Operational Core",
+                content: `
+                    <div class="space-y-6">
+                        <div class="p-6 bg-gradient-to-r from-sky-500/10 via-indigo-500/10 to-purple-500/10 rounded-2xl border border-sky-500/20 relative overflow-hidden">
+                            <div class="absolute -right-24 -bottom-24 w-48 h-48 bg-sky-500/10 rounded-full blur-2xl"></div>
+                            <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 flex items-center gap-2">
+                                <i class="fa-solid fa-award text-sky-500"></i> Overview Statement
+                            </h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
+                                Operating precisely at the intersection of student advocacy, national-level organizational development, enterprise system engineering, and cutting-edge deterministic physics theories, my mission is to deliver elite framework structures that empower communities.
+                            </p>
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="bg-white/80 dark:bg-slate-900/80 px-2.5 py-1 rounded-lg text-xs font-semibold text-sky-600 border border-sky-500/10">#ForStudents</span>
+                                <span class="bg-white/80 dark:bg-slate-900/80 px-2.5 py-1 rounded-lg text-xs font-semibold text-indigo-600 border border-sky-500/10">#ByStudents</span>
+                                <span class="bg-white/80 dark:bg-slate-900/80 px-2.5 py-1 rounded-lg text-xs font-semibold text-purple-600 border border-sky-500/10">#ToStudents</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Quick navigation matrix card -->
+                            <div class="glass-card p-5 rounded-2xl space-y-3">
+                                <h4 class="font-bold text-sm text-slate-400 uppercase tracking-widest">Leadership Spectrum</h4>
+                                <ul class="space-y-2 text-xs">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-sky-500"></i> <strong>ISDA:</strong> National VP & CTO</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-sky-500"></i> <strong>VB Publication:</strong> ACEO & CTO</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-sky-500"></i> <strong>App Makers:</strong> Zonal Head</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-sky-500"></i> <strong>AGNI / NISA:</strong> District Head</li>
+                                </ul>
+                            </div>
+                            <!-- Tech core matrix card -->
+                            <div class="glass-card p-5 rounded-2xl space-y-3">
+                                <h4 class="font-bold text-sm text-indigo-400 uppercase tracking-widest">Core Technical Branches</h4>
+                                <ul class="space-y-2 text-xs">
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-indigo-500"></i> <strong>Vande Bharat OS:</strong> Kernel Architecture</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-indigo-500"></i> <strong>Theoretical Physics:</strong> Light & Lens Monograph</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-indigo-500"></i> <strong>Chemical Engineering:</strong> PET Mineralization</li>
+                                    <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-indigo-500"></i> <strong>Specialized Orgs:</strong> CABO Game Dev</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Section -->
+                        <div class="space-y-4">
+                            <h4 class="text-base font-bold text-slate-800 dark:text-slate-100 px-1">Critical Contributions Map</h4>
+                            <div class="relative pl-6 border-l-2 border-indigo-500/20 space-y-6">
+                                <div class="relative">
+                                    <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-indigo-500 border-4 border-white dark:border-slate-950"></span>
+                                    <h5 class="text-sm font-bold text-indigo-600 dark:text-indigo-400">Indigenous Operating System Architecture</h5>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Conceived Vande Bharat OS kernel, scheduling systems, and memory hierarchy to build regional technological independence.</p>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-white dark:border-slate-950"></span>
+                                    <h5 class="text-sm font-bold text-sky-600 dark:text-sky-400">Elite National Student Governance</h5>
+                                    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Directing operational policies, hyper-local technical growth, and corporate structures inside ISDA for over thousands of student minds.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            isda: {
+                title: "1. ISDA",
+                icon: "fa-solid fa-graduation-cap",
+                subtitle: "Indian Software Development Association",
+                badge: "National Leadership Core",
+                content: `
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-sky-500/10 to-indigo-500/10 rounded-2xl border border-sky-500/10">
+                            <div class="w-12 h-12 rounded-xl bg-sky-500/20 text-sky-600 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm uppercase text-sky-600 dark:text-sky-400">ISDA Philosophy</h3>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">"For the students, by the students, and to the students."</p>
+                            </div>
+                        </div>
+
+                        <!-- Grid of key positions inside ISDA -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="glass-card p-5 rounded-2xl border border-slate-200/50 space-y-2">
+                                <div class="flex items-center gap-2 text-indigo-500">
+                                    <i class="fa-solid fa-crown text-sm"></i>
+                                    <h4 class="font-bold text-sm uppercase">National Vice President</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Oversee the organization's hyper-growth, corporate expansion structures, and national execution strategies across multiple states.
+                                </p>
+                            </div>
+
+                            <div class="glass-card p-5 rounded-2xl border border-slate-200/50 space-y-2">
+                                <div class="flex items-center gap-2 text-sky-500">
+                                    <i class="fa-solid fa-microchip text-sm"></i>
+                                    <h4 class="font-bold text-sm uppercase">Chief Technology Officer (CTO)</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Primary technical mind. Formulate the theoretical architecture and frameworks of the association's technology divisions.
+                                </p>
+                            </div>
+
+                            <div class="glass-card p-5 rounded-2xl border border-slate-200/50 space-y-2">
+                                <div class="flex items-center gap-2 text-emerald-500">
+                                    <i class="fa-solid fa-map-location-dot text-sm"></i>
+                                    <h4 class="font-bold text-sm uppercase">Branch Head (Tamil Nadu)</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Lead hyper-local development of student networks, technical workshops, hackathons, and activities across the state of Tamil Nadu.
+                                </p>
+                            </div>
+
+                            <div class="glass-card p-5 rounded-2xl border border-slate-200/50 space-y-2">
+                                <div class="flex items-center gap-2 text-purple-500">
+                                    <i class="fa-solid fa-users-gear text-sm"></i>
+                                    <h4 class="font-bold text-sm uppercase">National Leadership Board Member</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Active member of the core executive Operational Board deciding on governance guidelines, corporate scaling strategies, and engineering quality.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            vbpub: {
+                title: "2. VB Publication",
+                icon: "fa-solid fa-newspaper",
+                subtitle: "Vande Bharat Universal Publication",
+                badge: "Digital News & Academic Research",
+                content: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="glass-card p-5 rounded-2xl border border-slate-200/50 space-y-2">
+                                <div class="flex items-center gap-2 text-sky-500">
+                                    <i class="fa-solid fa-user-tie text-sm"></i>
+                                    <h4 class="font-bold text-sm uppercase">Assistant Chief Executive Officer (ACEO)</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Direct business expansion, handle international communication, and facilitate peer reviews for theoretical physics and environmental engineering journals.
+                                </p>
+                            </div>
+
+                            <div class="glass-card p-5 rounded-2xl border border-slate-200/50 space-y-2">
+                                <div class="flex items-center gap-2 text-purple-500">
+                                    <i class="fa-solid fa-network-wired text-sm"></i>
+                                    <h4 class="font-bold text-sm uppercase">Chief Technical Officer (CTO)</h4>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                    Architect and secure the massive content delivery servers, databases, and network backbones supporting our global academic publication web.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Special Spotlight: Chemistry / Environmental Research project -->
+                        <div class="glass-card p-6 rounded-2xl border-2 border-indigo-500/20 relative overflow-hidden space-y-4">
+                            <div class="absolute -right-16 -top-16 w-32 h-32 bg-indigo-500/10 rounded-full blur-xl"></div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-flask-vial animate-pulse"></i>
+                                </div>
+                                <div>
+                                    <span class="text-[9px] uppercase font-bold text-indigo-500 tracking-widest">Scientific Masterpiece Project</span>
+                                    <h4 class="font-bold text-base text-slate-800 dark:text-slate-100">PET Plastic Advanced Hydrolysis & Chemical Mineralization</h4>
+                                </div>
+                            </div>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Served as the <strong>Project Author & Executive Researcher</strong>, designing the advanced scientific methodology to break down stubborn PET polymers.
+                            </p>
+
+                            <!-- Chemistry Equation Flowchart -->
+                            <div class="p-4 bg-slate-100 dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 space-y-3 font-mono text-xs">
+                                <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Methodology Breakdown</div>
+                                <div class="flex flex-col space-y-1">
+                                    <div class="flex justify-between items-center text-[11px] text-slate-700 dark:text-slate-300">
+                                        <span>PET Polymer <span class="text-indigo-400">[C₁₀H₈O₄]ₙ</span></span>
+                                        <i class="fa-solid fa-arrow-right text-indigo-500"></i>
+                                        <span>Catalytic Hydrolysis</span>
+                                    </div>
+                                    <div class="flex justify-between items-center text-[11px] text-slate-700 dark:text-slate-300">
+                                        <span>Intermediate Monomers</span>
+                                        <i class="fa-solid fa-arrow-right text-indigo-500"></i>
+                                        <span>Ca(OH)₂ Mineralization</span>
+                                    </div>
+                                    <div class="text-[11px] text-emerald-500 font-semibold pt-1 border-t border-slate-200/50 dark:border-slate-800/50 flex items-center gap-1">
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        Result: Secure Calcium Terephthalate (mineralized bio-safe matrix)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            vos: {
+                title: "3. Vande Bharat OS",
+                icon: "fa-solid fa-terminal",
+                subtitle: "Indigenous Operating System",
+                badge: "System Founder & Chief Architect",
+                content: `
+                    <div class="space-y-6">
+                        <!-- Vande Bharat OS Overview Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800/50 text-center space-y-1">
+                                <i class="fa-solid fa-lightbulb text-amber-500 text-lg"></i>
+                                <h4 class="font-bold text-xs uppercase">System Founder</h4>
+                                <p class="text-[10px] text-slate-400">Formulated the long-term sovereign digital vision for indigenous computing.</p>
+                            </div>
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800/50 text-center space-y-1">
+                                <i class="fa-solid fa-microchip text-sky-500 text-lg"></i>
+                                <h4 class="font-bold text-xs uppercase">Chief Architect</h4>
+                                <p class="text-[10px] text-slate-400">Architected the micro-kernel, scheduling pipelines, and device management layers.</p>
+                            </div>
+                            <div class="bg-slate-100/50 dark:bg-slate-900/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800/50 text-center space-y-1">
+                                <i class="fa-solid fa-code text-purple-500 text-lg"></i>
+                                <h4 class="font-bold text-xs uppercase">Core Maintainer</h4>
+                                <p class="text-[10px] text-slate-400">Overseeing active codebase security and multi-developer git workflow integrity.</p>
+                            </div>
+                        </div>
+
+                        <!-- Interactive Terminal Simulator -->
+                        <div class="glass-card rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                            <!-- Terminal Header -->
+                            <div class="bg-slate-200 dark:bg-slate-900 px-4 py-2 flex items-center justify-between border-b border-slate-300 dark:border-slate-800">
+                                <div class="flex space-x-1.5">
+                                    <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                                    <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+                                </div>
+                                <div class="text-[10px] font-mono text-slate-500 font-bold tracking-wider uppercase">
+                                    Vande Bharat OS v1.0.4 - Kernel Mode
+                                </div>
+                                <div class="text-[10px] text-emerald-500 animate-pulse font-mono">
+                                    ● SYS_ONLINE
+                                </div>
+                            </div>
+
+                            <!-- Terminal Content Body -->
+                            <div class="p-4 bg-slate-950 font-mono text-xs text-emerald-400 space-y-3 min-h-[180px] select-all">
+                                <div class="text-slate-400 text-[11px]">
+                                    Type 'help', 'kernel', 'architecture', 'vibe' or 'clear'
+                                </div>
+                                <div id="terminal-history" class="space-y-2">
+                                    <div><span class="text-indigo-400">vos-core:~$</span> welcome</div>
+                                    <div class="text-slate-300">Initializing Vande Bharat micro-kernel subsystems... [SUCCESS]</div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <span class="text-indigo-400">vos-core:~$</span>
+                                    <input type="text" id="terminal-input" class="bg-transparent text-emerald-400 outline-none flex-grow border-none focus:ring-0 p-0" placeholder="..." autocomplete="off" autofocus>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            techgroups: {
+                title: "4. Tech Hubs & Admin",
+                icon: "fa-solid fa-users",
+                subtitle: "Administrative and Technical Organizations",
+                badge: "State-Wide Operations",
+                content: `
+                    <div class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Zonal Head App Makers -->
+                            <div class="glass-card p-6 rounded-2xl relative overflow-hidden space-y-4">
+                                <div class="absolute -right-16 -top-16 w-32 h-32 bg-sky-500/5 rounded-full blur-xl"></div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-600 flex items-center justify-center text-lg">
+                                        <i class="fa-solid fa-cubes"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-[9px] uppercase font-bold text-sky-500 tracking-wider">Chennai Zonal Head</span>
+                                        <h4 class="font-bold text-sm text-slate-800 dark:text-slate-100">App Makers Administration</h4>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Pioneering regional mobile application bootcamps, managing local project deployments, and orchestrating development tasks across hundreds of creative minds.
+                                </p>
+                            </div>
+
+                            <!-- Students Code Hub -->
+                            <div class="glass-card p-6 rounded-2xl relative overflow-hidden space-y-4">
+                                <div class="absolute -right-16 -top-16 w-32 h-32 bg-purple-500/5 rounded-full blur-xl"></div>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 flex items-center justify-center text-lg">
+                                        <i class="fa-solid fa-laptop-code"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-[9px] uppercase font-bold text-purple-500 tracking-wider">Executive TN</span>
+                                        <h4 class="font-bold text-sm text-slate-800 dark:text-slate-100">Students Code Hub</h4>
+                                    </div>
+                                </div>
+                                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Coordinating state-wide cross-collaboration. Organizing intense git hack sessions, structural coding challenges, and mentoring students to transition into solid programmers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            advocacy: {
+                title: "5. Student Advocacy",
+                icon: "fa-solid fa-handshake-angle",
+                subtitle: "District Level Governance & Empowerment",
+                badge: "Community-Led Integration",
+                content: `
+                    <div class="space-y-6">
+                        <div class="relative pl-6 border-l-2 border-indigo-500/30 space-y-6">
+                            <!-- NISA -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-orange-500 border-4 border-white dark:border-slate-950"></span>
+                                <h4 class="text-sm font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wide">
+                                    District Head — National Indian Students Association (NISA)
+                                </h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                                    Supervising district-wide student support structures, addressing academic inequalities, and designing localized programs to promote healthy academic rights.
+                                </p>
+                            </div>
+
+                            <!-- AGNI District Head -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-red-500 border-4 border-white dark:border-slate-950"></span>
+                                <h4 class="text-sm font-bold text-red-600 dark:text-red-400 uppercase tracking-wide">
+                                    District Head — Indian Next Generation Association (AGNI)
+                                </h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                                    Orchestrating technical literacy, youth empowerment, and local development programs directly geared towards unleashing technological passion inside the youth.
+                                </p>
+                            </div>
+
+                            <!-- AGNI Director -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-slate-950"></span>
+                                <h4 class="text-sm font-bold text-purple-600 dark:text-purple-400 uppercase tracking-wide">
+                                    Director — AGNI Community
+                                </h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">
+                                    Directing core developmental schemes, student support networks, and coordinate nationwide community hackathons.
+                                </p>
+                            </div>
+
+                            <!-- ILSA and CBSE community -->
+                            <div class="relative">
+                                <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sky-500 border-4 border-white dark:border-slate-950"></span>
+                                <h4 class="text-sm font-bold text-sky-600 dark:text-sky-400 uppercase tracking-wide">
+                                    Academic & Professional Affiliations
+                                </h4>
+                                <ul class="space-y-1 text-xs text-slate-500 dark:text-slate-400 mt-1 list-disc list-inside">
+                                    <li>Member, India Law Students Association (integrating student rights and constitutional jurisprudence)</li>
+                                    <li>Active Representative, CBSE Community (representing peers within school frameworks)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            theoretical: {
+                title: "6. Theory & Ideas",
+                icon: "fa-solid fa-bezier-curve",
+                subtitle: "Philosophical & Physics Hypotheses",
+                badge: "Absolute Determinist Frameworks",
+                content: `
+                    <div class="space-y-6">
+                        <!-- Causal Matrix description -->
+                        <div class="glass-card p-5 rounded-2xl border-2 border-indigo-500/20 relative overflow-hidden space-y-2">
+                            <h4 class="font-bold text-sm text-indigo-600 dark:text-indigo-400 uppercase tracking-wider flex items-center gap-1.5">
+                                <i class="fa-solid fa-dna"></i> Absolute Causal Matrix & DIPA
+                            </h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Conceived the <strong>Paradigm of Determinist Imprinting and Parental Attribution (DIPA)</strong>, highlighting that micro-decisions and historical causal footprints serve as exact parameters constructing the present outcome vectors of descendants. No psychological attribute emerges from vacuum.
+                            </p>
+                        </div>
+
+                        <!-- Theory of light -->
+                        <div class="glass-card p-5 rounded-2xl border-2 border-sky-500/20 relative overflow-hidden space-y-2">
+                            <h4 class="font-bold text-sm text-sky-600 dark:text-sky-400 uppercase tracking-wider flex items-center gap-1.5">
+                                <i class="fa-solid fa-wand-magic-sparkles"></i> Vishal's Theory of Light & Lens
+                            </h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Authored the technical physics monograph mapping geometric boundary confluences and volumetric image synthesis. Outlines how physical light streams behave precisely around refractive boundaries to model 3D synthesized environments.
+                            </p>
+                        </div>
+
+                        <!-- Game Bio CABO -->
+                        <div class="glass-card p-5 rounded-2xl relative overflow-hidden space-y-2">
+                            <h4 class="font-bold text-sm text-emerald-600 dark:text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                                <i class="fa-solid fa-gamepad"></i> Game Bio Organisation (CABO)
+                            </h4>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Founder & Owner of CABO, directing community game engine modules, interactive user bio synthesis, and responsive sandbox-driven mechanics.
+                            </p>
+                        </div>
+                    </div>
+                `
+            },
+            verifiedid: {
+                title: "7. Professional ID",
+                icon: "fa-solid fa-passport",
+                subtitle: "Ecosystem Integrations & Developer Status",
+                badge: "GenAI Vibe Engineering",
+                content: `
+                    <div class="space-y-6">
+                        <!-- Skill Progress Bar matrix -->
+                        <div class="glass-card p-6 rounded-2xl space-y-4">
+                            <h3 class="font-bold text-sm uppercase text-slate-400 tracking-wider">Dynamic Developer Capabilities</h3>
+
+                            <div class="space-y-3">
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Kernel Architecture (Vande Bharat OS)</span>
+                                        <span>95%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-indigo-500 h-full rounded-full transition-all duration-1000" style="width: 95%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Python & Cybersecurity (TryHackMe/HackerRank)</span>
+                                        <span>92%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-sky-500 h-full rounded-full transition-all duration-1000" style="width: 92%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>Theoretical Modeling (ACM, DIPA)</span>
+                                        <span>98%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-purple-500 h-full rounded-full transition-all duration-1000" style="width: 98%"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="flex justify-between text-xs font-semibold mb-1">
+                                        <span>GenAI Vibe Prompting & React Styling</span>
+                                        <span>100%</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 dark:bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <div class="bg-emerald-500 h-full rounded-full transition-all duration-1000" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Badge Grid Details -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center space-y-1">
+                                <i class="fa-brands fa-google text-red-500 text-xl"></i>
+                                <div class="text-xs font-bold text-slate-800 dark:text-slate-100">Google Developer</div>
+                                <div class="text-[9px] text-slate-400">Verified Peer Contributor</div>
+                            </div>
+                            <div class="p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 text-center space-y-1">
+                                <i class="fa-brands fa-microsoft text-blue-500 text-xl"></i>
+                                <div class="text-xs font-bold text-slate-800 dark:text-slate-100">Azure Educator</div>
+                                <div class="text-[9px] text-slate-400">Global Cloud Developer</div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        // Track Current Active Tab
+        let activeTab = "overview";
+
+        // Desktop Sidebar builder helper
+        function renderDesktopSidebar() {
+            const container = document.getElementById("desktop-tab-list");
+            container.innerHTML = "";
+
+            // Always add Overview + the 7 sections
+            const tabs = ["overview", ...Object.keys(tabData).filter(t => t !== "overview")];
+
+            tabs.forEach(tabKey => {
+                const item = tabData[tabKey];
+                const isActive = tabKey === activeTab;
+
+                const button = document.createElement("button");
+                button.className = `w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left text-xs font-bold transition-all ${
+                    isActive
+                        ? "bg-gradient-to-r from-sky-500 to-indigo-600 text-white shadow-md scale-[1.02] vibe-glow-blue"
+                        : "text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900"
+                }`;
+                button.onclick = () => switchTab(tabKey);
+
+                button.innerHTML = `
+                    <span class="flex items-center gap-2.5">
+                        <span class="w-6 h-6 flex items-center justify-center rounded-lg ${isActive ? 'bg-white/20' : 'bg-slate-100 dark:bg-slate-800/80'}">
+                            <i class="${item.icon}"></i>
+                        </span>
+                        <span>${item.title}</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right text-[10px] opacity-60"></i>
+                `;
+                container.appendChild(button);
+            });
+        }
+
+        // Mobile Top Link Builder Helper
+        function renderMobileTabs() {
+            const container = document.getElementById("mobile-tab-links");
+            container.innerHTML = "";
+
+            const tabs = ["overview", ...Object.keys(tabData).filter(t => t !== "overview")];
+
+            tabs.forEach(tabKey => {
+                const item = tabData[tabKey];
+                const button = document.createElement("button");
+                button.className = "px-3 py-2 text-left rounded-xl text-xs font-bold border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900 flex items-center gap-2";
+                button.onclick = () => {
+                    switchTab(tabKey);
+                    toggleMobileMenu();
+                };
+                button.innerHTML = `
+                    <i class="${item.icon} text-sky-500"></i>
+                    <span class="truncate">${item.title}</span>
+                `;
+                container.appendChild(button);
+            });
+        }
+
+        // Switching panel renderer
+        function renderActivePanel() {
+            const data = tabData[activeTab];
+            const panel = document.getElementById("active-tab-panel");
+
+            panel.innerHTML = `
+                <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6 animate-float-fade">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-b border-slate-200/50 dark:border-slate-800/50 pb-4">
+                        <div>
+                            <span class="px-2.5 py-1 text-[9px] uppercase font-black tracking-widest bg-gradient-to-r from-sky-500/10 to-indigo-500/10 text-sky-500 dark:text-sky-300 border border-sky-500/20 rounded">
+                                ${data.badge}
+                            </span>
+                            <h2 class="text-2xl sm:text-3xl font-black mt-2 tracking-tight flex items-center gap-2">
+                                <i class="${data.icon} text-sky-500"></i>
+                                ${data.subtitle}
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10">
+                        ${data.content}
+                    </div>
+                </div>
+            `;
+
+            // Auto-init terminal listeners if on Vande Bharat OS tab
+            if (activeTab === "vos") {
+                initTerminalSystem();
+            }
+        }
+
+        // Switch Tab Action
+        function switchTab(key) {
+            activeTab = key;
+            renderDesktopSidebar();
+            renderActivePanel();
+        }
+
+        // Mobile drawer toggler
+        function toggleMobileMenu() {
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
+        }
+
+        document.getElementById("menu-toggle").onclick = toggleMobileMenu;
+
+        // Vibe switcher logic (Corporate vs GenAI Vibe Glow)
+        let customTheme = "executive"; // "executive" or "vibe"
+
+        function setupVibeMode() {
+            const root = document.documentElement;
+            const vibeLabel = document.getElementById("vibe-mode-label");
+            const toggleBall = document.getElementById("theme-toggle-ball");
+            const toggleIcon = document.getElementById("theme-icon");
+            const toggleIconMobile = document.getElementById("theme-icon-mobile");
+            const nameBanner = document.getElementById("hero-name");
+            const heroCard = document.getElementById("profile-hero");
+
+            if (customTheme === "executive") {
+                // Remove vibe class and dark styling triggers
+                root.classList.remove("dark");
+                vibeLabel.textContent = "Executive Blue Mode";
+                toggleBall.className = "inline-block w-6 h-6 transform bg-white rounded-full transition-transform duration-300 translate-x-1 flex items-center justify-center text-xs shadow";
+                toggleIcon.className = "fas fa-briefcase text-sky-500";
+                toggleIconMobile.className = "fas fa-briefcase text-sky-500";
+
+                nameBanner.className = "bg-gradient-to-r from-sky-500 via-indigo-500 to-indigo-800 bg-clip-text text-transparent text-5xl sm:text-6xl font-black";
+                heroCard.className = "glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden vibe-glow-blue border border-sky-500/10";
+            } else {
+                // Add vibe classes and neon glows
+                root.classList.add("dark");
+                vibeLabel.textContent = "GenAI Cyber Mode";
+                toggleBall.className = "inline-block w-6 h-6 transform bg-white rounded-full transition-transform duration-300 translate-x-9 flex items-center justify-center text-xs shadow";
+                toggleIcon.className = "fa-solid fa-wand-magic-sparkles text-purple-600";
+                toggleIconMobile.className = "fa-solid fa-wand-magic-sparkles text-purple-600";
+
+                nameBanner.className = "bg-gradient-to-r from-purple-400 via-pink-500 to-emerald-400 bg-clip-text text-transparent text-5xl sm:text-6xl font-black";
+                heroCard.className = "glass-card rounded-3xl p-6 sm:p-8 relative overflow-hidden border-2 border-purple-500/30 vibe-glow-purple";
+            }
+        }
+
+        function toggleTheme() {
+            customTheme = customTheme === "executive" ? "vibe" : "executive";
+            setupVibeMode();
+        }
+
+        document.getElementById("theme-toggle").onclick = toggleTheme;
+        document.getElementById("theme-toggle-mobile").onclick = toggleTheme;
+
+        // Vande Bharat OS Kernel Shell logic
+        function initTerminalSystem() {
+            const input = document.getElementById("terminal-input");
+            if (!input) return;
+
+            input.addEventListener("keydown", function(e) {
+                if (e.key === "Enter") {
+                    const val = input.value.trim().toLowerCase();
+                    processTerminalCommand(val);
+                    input.value = "";
+                }
+            });
+        }
+
+        function processTerminalCommand(cmd) {
+            const history = document.getElementById("terminal-history");
+            if (!history) return;
+
+            let response = "";
+            if (cmd === "help") {
+                response = "Available Commands: 'kernel', 'architecture', 'vibe', 'clear'";
+            } else if (cmd === "kernel") {
+                response = "Vande Bharat Microkernel v1.0.4. Active Subsystems: Memory Paging, Volumetric Framebuffer, Priority scheduler.";
+            } else if (cmd === "architecture") {
+                response = "Architecture: ARM64 / x86_64 Dual-Platform Interface. Core scheduler operating on 16 threads with DIPA optimization.";
+            } else if (cmd === "vibe") {
+                response = "Activating Vibe Frequency Level 100... Neural interface online.";
+            } else if (cmd === "clear") {
+                history.innerHTML = "";
+                return;
+            } else if (cmd === "") {
+                return;
+            } else {
+                response = `Command '${cmd}' not recognized. Type 'help' for instructions.`;
+            }
+
+            const inputRow = document.createElement("div");
+            inputRow.innerHTML = `<span class="text-indigo-400">vos-core:~$</span> ${cmd}`;
+
+            const resRow = document.createElement("div");
+            resRow.className = "text-slate-300";
+            resRow.textContent = response;
+
+            history.appendChild(inputRow);
+            history.appendChild(resRow);
+
+            // Auto scroll to bottom
+            const termContainer = history.parentElement;
+            termContainer.scrollTop = termContainer.scrollHeight;
+        }
+
+        // ==========================================
+        // ABSOLUTE CAUSAL MATRIX CANVAS SIMULATOR
+        // ==========================================
+        const canvas = document.getElementById("causal-matrix-canvas");
+        const ctx = canvas.getContext("2d");
+        let nodes = [];
+        let connections = [];
+
+        function resizeCanvas() {
+            const rect = canvas.parentNode.getBoundingClientRect();
+            canvas.width = rect.width;
+            canvas.height = rect.height;
+        }
+
+        window.addEventListener("resize", resizeCanvas);
+
+        class MatrixNode {
+            constructor(x, y, type) {
+                this.x = x;
+                this.y = y;
+                this.type = type; // "imprint" (purple) or "outcome" (sky)
+                this.radius = type === "imprint" ? 8 : 6;
+                this.color = type === "imprint" ? "#A78BFA" : "#38BDF8";
+                this.pulse = 0;
+                this.vx = (Math.random() - 0.5) * 1.5;
+                this.vy = (Math.random() - 0.5) * 1.5;
+            }
+
+            draw() {
+                this.pulse += 0.05;
+                const activeRad = this.radius + Math.sin(this.pulse) * 2;
+
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, activeRad, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+                ctx.shadowBlur = 0; // reset
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Wall collisions
+                if (this.x < 10 || this.x > canvas.width - 10) this.vx *= -1;
+                if (this.y < 10 || this.y > canvas.height - 10) this.vy *= -1;
+            }
+        }
+
+        function spawnMatrixNode(type, x, y) {
+            const spawnX = x || Math.random() * (canvas.width - 40) + 20;
+            const spawnY = y || Math.random() * (canvas.height - 40) + 20;
+            const node = new MatrixNode(spawnX, spawnY, type);
+            nodes.push(node);
+        }
+
+        function clearMatrixCanvas() {
+            nodes = [];
+        }
+
+        canvas.addEventListener("click", function(e) {
+            const rect = canvas.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
+
+            // Alternating spawn types
+            const type = nodes.length % 2 === 0 ? "imprint" : "outcome";
+            spawnMatrixNode(type, clickX, clickY);
+        });
+
+        function drawConnections() {
+            ctx.lineWidth = 1;
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const dx = nodes[i].x - nodes[j].x;
+                    const dy = nodes[i].y - nodes[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 120) {
+                        ctx.beginPath();
+                        ctx.moveTo(nodes[i].x, nodes[i].y);
+                        ctx.lineTo(nodes[j].x, nodes[j].y);
+
+                        // Gradients depending on nodes interacting
+                        const gradient = ctx.createLinearGradient(nodes[i].x, nodes[i].y, nodes[j].x, nodes[j].y);
+                        gradient.addColorStop(0, nodes[i].color);
+                        gradient.addColorStop(1, nodes[j].color);
+
+                        ctx.strokeStyle = gradient;
+                        ctx.globalAlpha = (1 - dist / 120) * 0.7;
+                        ctx.stroke();
+                        ctx.globalAlpha = 1.0;
+                    }
+                }
+            }
+        }
+
+        function animateMatrix() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw background text nodes or code lines
+            ctx.fillStyle = "rgba(255, 255, 255, 0.02)";
+            ctx.font = "10px monospace";
+            ctx.fillText("DIPA_ATTRIBUTION_MATRIX_V1", 20, 30);
+            ctx.fillText("ABS_CAUSAL_SYSTEMS_ONLINE", canvas.width - 180, canvas.height - 20);
+
+            nodes.forEach(node => {
+                node.update();
+                node.draw();
+            });
+
+            drawConnections();
+            requestAnimationFrame(animateMatrix);
+        }
+
+        // Initialize Workspace on Page Load
+        window.onload = () => {
+            resizeCanvas();
+
+            // Seed a few initial nodes
+            for (let i = 0; i < 10; i++) {
+                spawnMatrixNode(i % 2 === 0 ? "imprint" : "outcome");
+            }
+
+            renderDesktopSidebar();
+            renderMobileTabs();
+            renderActivePanel();
+
+            animateMatrix();
+            setupVibeMode();
+        };
+    </script>
+</body>
+</html>
